@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import "./CardHolder.css";
+
 function CardHolder(props) {
   return (
     <div className="cardholder">
@@ -12,7 +12,7 @@ function CardHolder(props) {
         text={props.active ? "dark" : "muted"}
         border={props.active ? "primary" : "muted"}
         style={props.active ? { width: "35rem" } : { width: "25rem" }}
-        className={props.active ? "mb-2" : " mb-2 opacity-50"}
+        className={props.active ? "" : "opacity-50"}
       >
         <Card.Header className={props.active ? "text-primary" : ""}>
           <h3>{props.shift.shift}</h3>
