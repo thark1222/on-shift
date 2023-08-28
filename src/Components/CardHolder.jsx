@@ -8,11 +8,12 @@ function CardHolder(props) {
   return (
     <div className="cardholder">
       <Card
+      
         bg="light"
         text={props.active ? "dark" : "muted"}
         border={props.active ? "primary" : "muted"}
-        style={props.active ? { width: "35rem" } : { width: "25rem" }}
-        className={props.active ? "" : "opacity-50"}
+        style={{ width: "20rem" }}
+        className={props.active ? "container-fluid" : "opacity-50 container-fluid"}
       >
         <Card.Header className={props.active ? "text-primary" : ""}>
           <h3>{props.shift.shift}</h3>
@@ -24,8 +25,8 @@ function CardHolder(props) {
         <Card.Footer className="dark">
           <Container>
             <Row>
-              <Col>{props.shift.time}</Col>
-              <Col xs lg="3" className={String(props.timeLeft)[0] === "0"? 'text-danger': 'text-primary'}>
+              <Col >{props.shift.time}</Col>
+              <Col  className={String(props.timeLeft)[0] === "0"? 'text-danger': 'text-primary'}>
                 {props.active ? "Time Left: " + props.timeLeft : ""}
               </Col>
             </Row>
